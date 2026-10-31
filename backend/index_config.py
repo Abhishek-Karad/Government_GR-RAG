@@ -6,7 +6,8 @@ import os
 import re
 
 COLLECTION = os.getenv('QDRANT_COLLECTION', 'maharashtra_gr_chunks')
-CHUNKING_STRATEGY = 'structure-aware-v2'
+# Bumped because indexed embeddings now include contextual retrieval text.
+CHUNKING_STRATEGY = 'structure-aware-v3-contextual-hybrid'
 
 
 def model_slug(value):

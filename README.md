@@ -1,5 +1,7 @@
 # Remote Maharashtra GR RAG prototype
 
+For a detailed explanation of the implementation, architecture, ingestion flow, retrieval method, storage model, API, and limitations, see [implementation.md](implementation.md).
+
 This demo uses the public `orgpedia/mahGRs` repository **without cloning it**. It discovers files through GitHub's Git Trees API, fetches selected `.pdf.en.txt` files, extracts basic metadata, optionally generates grounded metadata with Gemini, and stores document/chunk text in SQLite. Embeddings and vector similarity search are stored separately in a persistent local Qdrant collection.
 
 ## Setup
@@ -26,12 +28,20 @@ uv run python gr_remote_rag.py reindex --model sentence-transformers/all-MiniLM-
 uv run python gr_remote_rag.py stats
 uv run python gr_remote_rag.py search "What COVID precautions were advised for families?"
 
+# run the Phase 0 FastAPI retrieval benchmark (start the API first)
+.venv/bin/python evaluation_harness.py --mode retrieval --base-url http://127.0.0.1:8000 --warmup --runs 3
+
+# audit the locally indexed corpus without changing SQLite or Qdrant
+.venv/bin/python corpus_audit.py
+
 # reranked, coverage-aware search with full evidence
 uv run python gr_remote_rag.py search "What COVID precautions were advised for families?" \
   --candidate-k 20 --top-k 6 --rerank --max-per-document 3 --show-evidence
 
 # start the API service; models and local indexes load once at startup
 HF_HUB_OFFLINE=1 uv run uvicorn backend.app:app --host 0.0.0.0 --port 8000
+
+# open the browser UI at http://localhost:8000/
 
 # query the API
 curl -X POST http://localhost:8000/api/v1/query \
@@ -62,13 +72,16 @@ Gemini generates a document title/subject, faithful summary, keywords, policy ca
 - Chunks are stored per index configuration in SQLite and use paragraph, heading, and numbered-clause boundaries before tokenizer-aware splitting. The effective maximum is capped by the selected model's supported sequence length.
 - The active chunking strategy is `structure-aware-v2`: it uses the embedding tokenizer's offset mappings and validates the exact prefixed, special-token-inclusive input before every embedding call. Defaults are a 220-token target and 30-token overlap; with MiniLM the effective model limit is read from the loaded model (normally 256).
 - `reindex` rebuilds from `documents.gr_text` and does not call GitHub or Gemini. It is safe for creating a new model/configuration index while retaining existing chunks and collections.
-- `search` first retrieves and validates chunks with the embedding model, then sends the question and those chunks to Gemini for a grounded answer. Answers cite retrieved chunks as `[SOURCE N]`; set `GEMINI_ANSWER_MODEL` to use a different answer model than `GEMINI_MODEL`.
+- The FastAPI query path generates hybrid candidates from embedding similarity and SQLite exact-term lookup, validates them, then reranks/selects passages before sending the question and evidence to Gemini for a grounded answer. The original CLI remains available as a dense-retrieval baseline. Answers cite retrieved chunks as `[SOURCE N]`; set `GEMINI_ANSWER_MODEL` to use a different answer model than `GEMINI_MODEL`.
 - Search can optionally rerank up to 20 validated Qdrant candidates with `cross-encoder/ms-marco-MiniLM-L6-v2` (override with `RERANKER_MODEL`). After ranking, MMR selects the final 5-8 passages using reranker relevance plus candidate-passage embedding similarity, so duplicate passages are penalized while distinct facts from one circular can remain. A Qdrant relative-score gate prevents unrelated circulars being added just to fill the budget. Omit `--rerank` for the embedding-only baseline; the same coverage selector is used in both modes for fair benchmarking. `--show-evidence` prints stable evidence IDs, Qdrant/reranker scores, document metadata, source spans, and the exact saved chunk text.
 - The coverage embeddings are computed only for the retrieved candidates at query time and are not persisted or used to rebuild the GR index. Search output includes `retrieval_ms`, `ranking_ms`, and `selection_ms` so reranking-on/off comparisons can report coverage, retrieval accuracy, and latency separately. The API accepts `top_k` from 1 through 8 (5 by default).
 - Changing from `structure-aware-v1` to `structure-aware-v2` creates an isolated model/index configuration. Existing vectors are retained; ingest or reindex the desired documents into the new collection before switching the active query service. Gemini enrichment metadata is preserved when document content is unchanged.
 - New chunks store `source_start`, `source_end`, and `source_spans_json` in SQLite and the same span metadata in Qdrant payloads. Existing documents and collections remain readable; run `reindex` only when you need span metadata and the new exact-slice chunking for already indexed documents. This may change chunk boundaries and therefore requires new vectors in the selected isolated collection.
 - Gemini answers are validated JSON with `answer`, `claims`, `evidence_ids`, `limitations`, and `answer_status`. Unknown IDs are rejected; claims without lexical support are marked unverified and the result is downgraded to `insufficient_evidence`.
 - The FastAPI backend is split under `backend/`: `config.py` owns settings, `embedding_service.py` owns MiniLM, `database.py` owns SQLite access, `retrieval_service.py` owns Qdrant/filtering/reranking/diversification, `gemini_service.py` owns the reusable Gemini client, and `app.py` owns lifecycle and HTTP endpoints. The original CLI remains available.
-- The API loads shared resources once during startup. SQLite connections are created per request, while model, Qdrant client, and Gemini client state are reused. Set `RERANK_ENABLED=true` to load the cross-encoder during startup; leave it false if the reranker model is not cached.
+- The browser UI is served by FastAPI at `/`. It posts questions with the fixed production retrieval configuration `candidate_k=30`, `top_k=6`, `max_per_document=7`, and reranking enabled, then displays Gemini’s answer and the selected source passages in expandable evidence cards.
+- Phase 0 evaluation cases live in `evaluation/seed_cases.jsonl`. `evaluation_harness.py` is an external FastAPI-only client: it sends explicit `30/6/7` settings, can disable Gemini only in opt-in evaluation mode, and writes separate FastAPI reports without overwriting the historical CLI baseline.
+- `corpus_audit.py` reports the actual locally indexed corpus, source-language/script signals, table/OCR markers, numbered clauses, metadata completeness, duplicate candidates and index completeness. It does not claim that the local database is a complete inventory of the remote 33-department repository.
+- The API loads shared resources once during startup. SQLite connections are created per request, while model, Qdrant client, Gemini client and, by default, the reranker are initialized before the server accepts queries. Set `RERANK_PRELOAD=false` to defer reranker loading; `RERANK_ENABLED` still controls the default request behavior, while individual requests may explicitly enable reranking.
 - Gemini query latency is bounded with `GEMINI_TIMEOUT_MS=15000`, one SDK attempt, and one application retry by default. Use `GEMINI_MAX_RETRIES=0` for fail-fast behavior when the API is repeatedly returning `503`; `GEMINI_SDK_ATTEMPTS` controls the SDK-side attempt count. Gemini 3.x requests use minimal thinking for this short grounded-answer task.
-- If the configured Gemini model returns `503 UNAVAILABLE` or `504 DEADLINE_EXCEEDED`, the API/CLI makes one bounded attempt with `GEMINI_FALLBACK_MODEL` (default `gemini-2.5-flash-lite`). Set it to an available model or set it empty to disable fallback.
+- If the configured Gemini model returns `503 UNAVAILABLE` or `504 DEADLINE_EXCEEDED`, the API/CLI makes one bounded attempt with `GEMINI_FALLBACK_MODEL` (default `gemini-3.5-flash-lite`). Set it to an available model or set it empty to disable fallback.

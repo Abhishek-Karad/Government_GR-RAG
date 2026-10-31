@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MahaGR Document Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="MahaGR home">
+          <span class="brand-mark">MG</span>
+          <span>
+            <strong>MahaGR</strong>
+            <small>Document intelligence</small>
+          </span>
+        </a>
+        <div class="header-label">Maharashtra · Official resolutions</div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="eyebrow">Maharashtra Government Resolutions</p>
+          <h1>Ask the archive.<br /><em>Get the evidence.</em></h1>
+          <p class="hero-copy">Search across government resolutions and receive a grounded answer with the original source passages behind it.</p>
+        </section>
+
+        <section class="query-panel" aria-label="Ask a question">
+          <label for="question">Your question</label>
+          <div class="question-row">
+            <textarea id="question" rows="3" placeholder="e.g. How many bridge works were approved in Wardha under GR No. 168?" autofocus></textarea>
+            <button id="ask-button" type="button">
+              <span class="button-label">Ask MahaGR</span>
+              <span class="button-arrow">↗</span>
+            </button>
+          </div>
+          <div class="query-footer">
+            <span>Press <kbd>⌘</kbd><kbd>Enter</kbd> to search</span>
+          </div>
+        </section>
+
+        <div id="error-box" class="error-box" role="alert" hidden></div>
+        <div id="loading" class="loading-state" aria-label="Searching" hidden>
+          <span class="loader"></span>
+        </div>
+
+        <section id="answer-section" class="answer-section" hidden>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Grounded response</p>
+              <h2>Gemini’s answer</h2>
+            </div>
+            <span id="answer-status" class="answer-status"></span>
+          </div>
+          <article class="answer-card">
+            <div id="answer-text" class="answer-text"></div>
+            <div id="limitations" class="limitations" hidden></div>
+          </article>
+          <div id="claims" class="claims" hidden>
+            <p class="eyebrow">Verified claims</p>
+            <div id="claims-list"></div>
+          </div>
+        </section>
+
+        <section id="evidence-section" class="evidence-section" hidden>
+          <details open>
+            <summary>
+              <span class="summary-title"><span class="summary-icon">✦</span> Retrieved evidence</span>
+              <span id="evidence-count" class="count-badge"></span>
+            </summary>
+            <div id="evidence-list" class="evidence-list"></div>
+          </details>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Source text preserved from Maharashtra Government Resolutions</span>
+        
+      </footer>
+    </div>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

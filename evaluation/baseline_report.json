@@ -1,0 +1,306 @@
+{
+  "schema_version": "phase0-evaluation-v1",
+  "generated_at": "2026-10-29T09:08:35Z",
+  "config": {
+    "name": "baseline_dense_rerank_mmr_30_6_7",
+    "candidate_k": 30,
+    "top_k": 6,
+    "max_per_document": 7,
+    "rerank": true,
+    "chunk_size": 220,
+    "overlap": 30,
+    "index_config_id": "21e74095355b2dbbd1185ed3",
+    "config_id": "21e74095355b2dbbd1185ed3",
+    "collection_name": "maharashtra-gr-chunks-sentence-transformers-all-minilm-l6-v2-21e74095355b",
+    "model_revision": "unspecified",
+    "prefix_mode": "none"
+  },
+  "cases": [
+    {
+      "id": "eval_001",
+      "answerable": true,
+      "document_recall_at_30": true,
+      "evidence_recall_at_6": true,
+      "mrr": 1.0,
+      "precision_at_6": 0.6666666666666666,
+      "fact_coverage": 0.2,
+      "page_coverage": null,
+      "expected_evidence_coverage": null,
+      "facts_hit": 1,
+      "facts_expected": 5,
+      "gold_document_ids": [
+        "769e0e82c8aea5a02f0700ce"
+      ],
+      "selected_document_ids": [
+        "769e0e82c8aea5a02f0700ce",
+        "769e0e82c8aea5a02f0700ce",
+        "769e0e82c8aea5a02f0700ce",
+        "937556e4f338b5d551b41a6a",
+        "769e0e82c8aea5a02f0700ce",
+        "15daf2245798400c27c53596"
+      ],
+      "selected_evidence_ids": [
+        "E1",
+        "E6",
+        "E5",
+        "E7",
+        "E2",
+        "E25"
+      ],
+      "answer_correctness": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null
+    },
+    {
+      "id": "eval_002",
+      "answerable": true,
+      "document_recall_at_30": true,
+      "evidence_recall_at_6": true,
+      "mrr": 1.0,
+      "precision_at_6": 0.3333333333333333,
+      "fact_coverage": 0.25,
+      "page_coverage": true,
+      "expected_evidence_coverage": null,
+      "facts_hit": 1,
+      "facts_expected": 4,
+      "gold_document_ids": [
+        "a5f6f9a6164f34d6308b39a6"
+      ],
+      "selected_document_ids": [
+        "a5f6f9a6164f34d6308b39a6",
+        "d7d2a42173ee0987a3fedfc6",
+        "ba7705ea9aa03881fa6c7d00",
+        "a5f6f9a6164f34d6308b39a6",
+        "dacedb78a776055bf862e27d",
+        "286a273c6a8154d8812ab14e"
+      ],
+      "selected_evidence_ids": [
+        "E19",
+        "E27",
+        "E26",
+        "E6",
+        "E25",
+        "E12"
+      ],
+      "answer_correctness": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null
+    },
+    {
+      "id": "eval_003",
+      "answerable": true,
+      "document_recall_at_30": true,
+      "evidence_recall_at_6": true,
+      "mrr": 1.0,
+      "precision_at_6": 0.16666666666666666,
+      "fact_coverage": 0.0,
+      "page_coverage": true,
+      "expected_evidence_coverage": null,
+      "facts_hit": 0,
+      "facts_expected": 1,
+      "gold_document_ids": [
+        "769e0e82c8aea5a02f0700ce"
+      ],
+      "selected_document_ids": [
+        "769e0e82c8aea5a02f0700ce",
+        "2e660a4198ce128a07c9f562",
+        "a695bdf5302d5c8027027814",
+        "83bff3452d1ee370c32ce808",
+        "394620bcdc189b91eb3a69b3",
+        "657edad975610717b3dd1fc9"
+      ],
+      "selected_evidence_ids": [
+        "E19",
+        "E29",
+        "E9",
+        "E1",
+        "E24",
+        "E2"
+      ],
+      "answer_correctness": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null
+    },
+    {
+      "id": "eval_004",
+      "answerable": true,
+      "document_recall_at_30": true,
+      "evidence_recall_at_6": true,
+      "mrr": 1.0,
+      "precision_at_6": 0.16666666666666666,
+      "fact_coverage": 0.3333333333333333,
+      "page_coverage": null,
+      "expected_evidence_coverage": null,
+      "facts_hit": 1,
+      "facts_expected": 3,
+      "gold_document_ids": [
+        "2a764c7bfec1206a9d0b6fec",
+        "769e0e82c8aea5a02f0700ce"
+      ],
+      "selected_document_ids": [
+        "769e0e82c8aea5a02f0700ce",
+        "15daf2245798400c27c53596",
+        "a695bdf5302d5c8027027814",
+        "15daf2245798400c27c53596",
+        "3d753c53d5ef4274650f4b97",
+        "3153384a0c2de740110308f7"
+      ],
+      "selected_evidence_ids": [
+        "E1",
+        "E7",
+        "E5",
+        "E3",
+        "E2",
+        "E13"
+      ],
+      "answer_correctness": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null
+    },
+    {
+      "id": "eval_005",
+      "answerable": false,
+      "document_recall_at_30": false,
+      "evidence_recall_at_6": false,
+      "mrr": 0.0,
+      "precision_at_6": 0.0,
+      "fact_coverage": 0.0,
+      "page_coverage": null,
+      "expected_evidence_coverage": null,
+      "facts_hit": 0,
+      "facts_expected": 0,
+      "gold_document_ids": [],
+      "selected_document_ids": [
+        "8dd932b3d7d1ac3576cb121a",
+        "d7d2a42173ee0987a3fedfc6",
+        "d7d2a42173ee0987a3fedfc6",
+        "a5f6f9a6164f34d6308b39a6",
+        "827f3e71bfdfc22c0fb65b05",
+        "111be2d2d2e3a41540de46d0"
+      ],
+      "selected_evidence_ids": [
+        "E18",
+        "E21",
+        "E5",
+        "E4",
+        "E27",
+        "E13"
+      ],
+      "answer_correctness": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null
+    }
+  ],
+  "runs_per_case": 1,
+  "warmup_requested": true,
+  "summary": {
+    "case_count": 5,
+    "answerable_case_count": 4,
+    "retrieval_metrics": {
+      "document_recall_at_30": 1,
+      "evidence_recall_at_6": 1,
+      "mrr": 1.0,
+      "precision_at_6": 0.3333333333333333,
+      "fact_coverage": 0.19583333333333333,
+      "page_coverage": 1,
+      "expected_evidence_coverage": null
+    },
+    "answer_metrics": {
+      "answer_correctness": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_gemini_not_run"
+    },
+    "performance_metrics": {
+      "embedding_ms": {
+        "mean": 7.544299799701548,
+        "p50": 7.497915999920224,
+        "p95": 7.781358599459054
+      },
+      "vector_ms": {
+        "mean": 1.4722584000992356,
+        "p50": 1.3780419994873228,
+        "p95": 1.7989497999224113
+      },
+      "reranking_ms": {
+        "mean": 390.49756659915147,
+        "p50": 365.71941599868296,
+        "p95": 472.9659083986917
+      },
+      "evidence_selection_ms": {
+        "mean": 373.8774250003189,
+        "p50": 357.8975000000355,
+        "p95": 420.51050840018434
+      },
+      "total_ms": {
+        "mean": 1015.0366829999257,
+        "p50": 988.0750409993198,
+        "p95": 1079.4635582005867
+      }
+    }
+  },
+  "timings": [
+    {
+      "embedding_ms": 7.668624999496387,
+      "vector_ms": 1.8898329999501584,
+      "reranking_ms": 365.71941599868296,
+      "evidence_selection_ms": 378.95504200059804,
+      "gemini_ms": null,
+      "total_ms": 1076.7907909994392,
+      "candidate_count": 30,
+      "selected_count": 6
+    },
+    {
+      "embedding_ms": 7.809541999449721,
+      "vector_ms": 1.3237910006864695,
+      "reranking_ms": 491.36724999880244,
+      "evidence_selection_ms": 356.4161249996687,
+      "gemini_ms": null,
+      "total_ms": 1080.1317500008736,
+      "candidate_count": 30,
+      "selected_count": 6
+    },
+    {
+      "embedding_ms": 7.3879999999917345,
+      "vector_ms": 1.3342090005608043,
+      "reranking_ms": 342.834999999468,
+      "evidence_selection_ms": 430.8993750000809,
+      "gemini_ms": null,
+      "total_ms": 943.0507920005766,
+      "candidate_count": 27,
+      "selected_count": 6
+    },
+    {
+      "embedding_ms": 7.357415999649675,
+      "vector_ms": 1.435416999811423,
+      "reranking_ms": 399.36054199824866,
+      "evidence_selection_ms": 357.8975000000355,
+      "gemini_ms": null,
+      "total_ms": 988.0750409993198,
+      "candidate_count": 29,
+      "selected_count": 6
+    },
+    {
+      "embedding_ms": 7.497915999920224,
+      "vector_ms": 1.3780419994873228,
+      "reranking_ms": 353.2056250005553,
+      "evidence_selection_ms": 345.2190830012114,
+      "gemini_ms": null,
+      "total_ms": 987.1350409994193,
+      "candidate_count": 28,
+      "selected_count": 6
+    }
+  ]
+}

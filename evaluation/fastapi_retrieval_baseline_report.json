@@ -1,0 +1,552 @@
+{
+  "schema_version": "phase0-fastapi-evaluation-v1",
+  "mode": "retrieval",
+  "base_url": "http://127.0.0.1:8000",
+  "health": {
+    "status": "ok",
+    "collection": "maharashtra-gr-chunks-sentence-transformers-all-minilm-l6-v2-21e74095355b",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker_enabled": false,
+    "api_version": "1.0.0"
+  },
+  "configuration": {
+    "candidate_k": 30,
+    "top_k": 6,
+    "max_per_document": 7,
+    "rerank": true,
+    "observed_response_parameters": [
+      "{\"candidate_k\": 30, \"max_per_document\": 7, \"rerank\": true, \"top_k\": 6}"
+    ]
+  },
+  "case_count": 9,
+  "successful_requests": 9,
+  "failed_requests": 0,
+  "warmup_requested": true,
+  "runs_per_case": 1,
+  "cases": [
+    {
+      "id": "eval_001",
+      "answerable": true,
+      "evaluation_status": "evaluated",
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": true,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 0.2,
+      "evidence_all_retrieved_at_6": false,
+      "precision_at_6": 0.16666666666666666,
+      "mrr": 1.0,
+      "fact_coverage": 0.2,
+      "facts_hit": 1,
+      "facts_expected": 5,
+      "gold_document_ids": [
+        "769e0e82c8aea5a02f0700ce"
+      ],
+      "candidate_document_ids_at_30": [
+        "15daf2245798400c27c53596",
+        "2a764c7bfec1206a9d0b6fec",
+        "394620bcdc189b91eb3a69b3",
+        "769e0e82c8aea5a02f0700ce",
+        "8f1ae9f03d6d87a05239550c",
+        "937556e4f338b5d551b41a6a",
+        "f35b9697102db2441adf8126"
+      ],
+      "selected_evidence_ids": [
+        "E1",
+        "E6",
+        "E5",
+        "E7",
+        "E2",
+        "E25"
+      ],
+      "run": 1
+    },
+    {
+      "id": "eval_002",
+      "answerable": true,
+      "evaluation_status": "evaluated",
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": true,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 0.0,
+      "evidence_all_retrieved_at_6": false,
+      "precision_at_6": 0.0,
+      "mrr": 0.16666666666666666,
+      "fact_coverage": 0.0,
+      "facts_hit": 0,
+      "facts_expected": 4,
+      "gold_document_ids": [
+        "a5f6f9a6164f34d6308b39a6"
+      ],
+      "candidate_document_ids_at_30": [
+        "1c37d3c2fdccecdf87fb935f",
+        "286a273c6a8154d8812ab14e",
+        "9d8ebc374f950ce03334ea74",
+        "a5f6f9a6164f34d6308b39a6",
+        "b6518ae160ac61ad042c4d74",
+        "ba7705ea9aa03881fa6c7d00",
+        "d7d2a42173ee0987a3fedfc6",
+        "dacedb78a776055bf862e27d",
+        "f67f8aedbb6835ccdacfbfc8",
+        "fb1fb786999e158be6e1bbbc"
+      ],
+      "selected_evidence_ids": [
+        "E19",
+        "E27",
+        "E26",
+        "E12",
+        "E25",
+        "E3"
+      ],
+      "run": 1
+    },
+    {
+      "id": "eval_003",
+      "answerable": true,
+      "evaluation_status": "evaluated",
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": true,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 0.0,
+      "evidence_all_retrieved_at_6": false,
+      "precision_at_6": 0.0,
+      "mrr": 0.05263157894736842,
+      "fact_coverage": 0.0,
+      "facts_hit": 0,
+      "facts_expected": 1,
+      "gold_document_ids": [
+        "769e0e82c8aea5a02f0700ce"
+      ],
+      "candidate_document_ids_at_30": [
+        "099df425e4435f352062b6ce",
+        "0f6564985c5658a3afdace5f",
+        "111be2d2d2e3a41540de46d0",
+        "15daf2245798400c27c53596",
+        "1c37d3c2fdccecdf87fb935f",
+        "1e5bc5ae31f5315f69869488",
+        "1ebeff8e85bcf78d8668cefa",
+        "2e660a4198ce128a07c9f562",
+        "36324bc3b3ac278ef1af1594",
+        "37dc1e436e234d5f6c4dad77",
+        "394620bcdc189b91eb3a69b3",
+        "3d753c53d5ef4274650f4b97",
+        "57391e9d400ad108594d481d",
+        "657edad975610717b3dd1fc9",
+        "769e0e82c8aea5a02f0700ce",
+        "827f3e71bfdfc22c0fb65b05",
+        "83bff3452d1ee370c32ce808",
+        "9b494c08bd16ab038bf8d24e",
+        "9d8ebc374f950ce03334ea74",
+        "a695bdf5302d5c8027027814",
+        "b6518ae160ac61ad042c4d74",
+        "db5776767975a1f6068424dd"
+      ],
+      "selected_evidence_ids": [
+        "E19",
+        "E29",
+        "E9",
+        "E1",
+        "E24",
+        "E2"
+      ],
+      "run": 1
+    },
+    {
+      "id": "eval_004",
+      "answerable": true,
+      "evaluation_status": "evaluated",
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": true,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 0.0,
+      "evidence_all_retrieved_at_6": false,
+      "precision_at_6": 0.0,
+      "mrr": 1.0,
+      "fact_coverage": 0.0,
+      "facts_hit": 0,
+      "facts_expected": 3,
+      "gold_document_ids": [
+        "2a764c7bfec1206a9d0b6fec",
+        "769e0e82c8aea5a02f0700ce"
+      ],
+      "candidate_document_ids_at_30": [
+        "099df425e4435f352062b6ce",
+        "0f6564985c5658a3afdace5f",
+        "15daf2245798400c27c53596",
+        "1c37d3c2fdccecdf87fb935f",
+        "2a764c7bfec1206a9d0b6fec",
+        "3153384a0c2de740110308f7",
+        "31bb2e5e628c7593aec5f099",
+        "36324bc3b3ac278ef1af1594",
+        "37dc1e436e234d5f6c4dad77",
+        "3b28131c8c5f95e643a2cec8",
+        "3d753c53d5ef4274650f4b97",
+        "57391e9d400ad108594d481d",
+        "657edad975610717b3dd1fc9",
+        "6ce3a84e9a92714598ddbde2",
+        "74d49acb51c70d3a7d0e92ba",
+        "769e0e82c8aea5a02f0700ce",
+        "827f3e71bfdfc22c0fb65b05",
+        "83bff3452d1ee370c32ce808",
+        "9b494c08bd16ab038bf8d24e",
+        "9e229c707015a225a9af26c9",
+        "a695bdf5302d5c8027027814",
+        "f35b9697102db2441adf8126",
+        "f7c6d7fedf5b122773cb5479"
+      ],
+      "selected_evidence_ids": [
+        "E1",
+        "E7",
+        "E5",
+        "E2",
+        "E13",
+        "E19"
+      ],
+      "run": 1
+    },
+    {
+      "id": "eval_005",
+      "answerable": false,
+      "evaluation_status": "unanswerable_excluded",
+      "document_recall_at_30": null,
+      "document_all_retrieved_at_30": null,
+      "document_partial_coverage_at_30": null,
+      "evidence_recall_at_6": null,
+      "evidence_all_retrieved_at_6": null,
+      "precision_at_6": null,
+      "mrr": null,
+      "fact_coverage": null,
+      "gold_document_ids": [],
+      "selected_evidence_ids": [],
+      "run": 1
+    },
+    {
+      "id": "eval_006",
+      "answerable": true,
+      "evaluation_status": "evaluated",
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": true,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 0.0,
+      "evidence_all_retrieved_at_6": false,
+      "precision_at_6": 0.0,
+      "mrr": 1.0,
+      "fact_coverage": 0.0,
+      "facts_hit": 0,
+      "facts_expected": 1,
+      "gold_document_ids": [
+        "0afb861804f38f8def07eb1c"
+      ],
+      "candidate_document_ids_at_30": [
+        "0afb861804f38f8def07eb1c",
+        "0c98c2cb393bab620c45a57c",
+        "10b4b53dbe87aa117b62a979",
+        "1c37d3c2fdccecdf87fb935f",
+        "286a273c6a8154d8812ab14e",
+        "3153384a0c2de740110308f7",
+        "31bb2e5e628c7593aec5f099",
+        "36324bc3b3ac278ef1af1594",
+        "6e08050653e7ea796ea6cf8a",
+        "8e24b373959b522b5b782f89",
+        "a4883ed019f7b1e485ae3ddf",
+        "b6518ae160ac61ad042c4d74",
+        "b81ff515b77147923ef45ef4",
+        "dacedb78a776055bf862e27d",
+        "f55dfbe8deca3ed2598ef248",
+        "f67f8aedbb6835ccdacfbfc8"
+      ],
+      "selected_evidence_ids": [
+        "E1",
+        "E6",
+        "E3",
+        "E10",
+        "E8",
+        "E5"
+      ],
+      "run": 1
+    },
+    {
+      "id": "eval_007",
+      "answerable": true,
+      "evaluation_status": "evaluated",
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": true,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 0.0,
+      "evidence_all_retrieved_at_6": false,
+      "precision_at_6": 0.0,
+      "mrr": 0.09090909090909091,
+      "fact_coverage": 0.0,
+      "facts_hit": 0,
+      "facts_expected": 1,
+      "gold_document_ids": [
+        "3153384a0c2de740110308f7"
+      ],
+      "candidate_document_ids_at_30": [
+        "0afb861804f38f8def07eb1c",
+        "0f6564985c5658a3afdace5f",
+        "10b4b53dbe87aa117b62a979",
+        "111be2d2d2e3a41540de46d0",
+        "1cd1aa903570974f1ecd844a",
+        "2d7fdbcdeda37c6120ac1866",
+        "3153384a0c2de740110308f7",
+        "31bb2e5e628c7593aec5f099",
+        "36324bc3b3ac278ef1af1594",
+        "3b28131c8c5f95e643a2cec8",
+        "58a3cbf2c966da44b00f317e",
+        "5e39bb8a146243ff93da0435",
+        "610fe5980c3977f579223061",
+        "8e24b373959b522b5b782f89",
+        "a4883ed019f7b1e485ae3ddf",
+        "a6ce11d629e7f62c6a6d937c",
+        "b81ff515b77147923ef45ef4",
+        "cd589d4232e948adb9701ca5",
+        "f55dfbe8deca3ed2598ef248"
+      ],
+      "selected_evidence_ids": [
+        "E10",
+        "E19",
+        "E18",
+        "E12",
+        "E11",
+        "E20"
+      ],
+      "run": 1
+    },
+    {
+      "id": "eval_008",
+      "answerable": true,
+      "evaluation_status": "evaluated",
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": true,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 1.0,
+      "evidence_all_retrieved_at_6": true,
+      "precision_at_6": 0.16666666666666666,
+      "mrr": 1.0,
+      "fact_coverage": 1.0,
+      "facts_hit": 1,
+      "facts_expected": 1,
+      "gold_document_ids": [
+        "2e660a4198ce128a07c9f562"
+      ],
+      "candidate_document_ids_at_30": [
+        "0d3650d9547a1db241c6769f",
+        "15daf2245798400c27c53596",
+        "2e660a4198ce128a07c9f562",
+        "31bb2e5e628c7593aec5f099",
+        "394620bcdc189b91eb3a69b3",
+        "3b28131c8c5f95e643a2cec8",
+        "443cadd7892c7991401b5458",
+        "4aa7676d57fa6d97ad0f365d",
+        "827f3e71bfdfc22c0fb65b05",
+        "83bff3452d1ee370c32ce808",
+        "8f1ae9f03d6d87a05239550c",
+        "937556e4f338b5d551b41a6a",
+        "a5a13a8912bb582897860fc1",
+        "cead437b5dde2f7e970fb616",
+        "d17e08839327b4f950f63ca4",
+        "dc4467f87d84caddea4c6bb1",
+        "dcf02f6a9d6876a4bbbaeeef",
+        "eefdc97c1f1d4a5e0599e6f1",
+        "f35b9697102db2441adf8126"
+      ],
+      "selected_evidence_ids": [
+        "E1",
+        "E11",
+        "E26",
+        "E19",
+        "E7",
+        "E12"
+      ],
+      "run": 1
+    },
+    {
+      "id": "eval_009",
+      "answerable": true,
+      "evaluation_status": "evaluated",
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": true,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 0.0,
+      "evidence_all_retrieved_at_6": false,
+      "precision_at_6": 0.0,
+      "mrr": 1.0,
+      "fact_coverage": 0.0,
+      "facts_hit": 0,
+      "facts_expected": 1,
+      "gold_document_ids": [
+        "1fdf4c7fbfe50205b2bd5355"
+      ],
+      "candidate_document_ids_at_30": [
+        "0f6564985c5658a3afdace5f",
+        "1cd1aa903570974f1ecd844a",
+        "1fdf4c7fbfe50205b2bd5355",
+        "2d7fdbcdeda37c6120ac1866",
+        "3153384a0c2de740110308f7",
+        "4aa7676d57fa6d97ad0f365d",
+        "58a3cbf2c966da44b00f317e",
+        "5e39bb8a146243ff93da0435",
+        "610fe5980c3977f579223061",
+        "a6ce11d629e7f62c6a6d937c",
+        "b9837240f5e6a173c22f7755",
+        "bf7ecc5355d256e40d060759",
+        "d7d2a42173ee0987a3fedfc6",
+        "eefdc97c1f1d4a5e0599e6f1",
+        "fe1995e6c9fc6e5e6f7d79f8"
+      ],
+      "selected_evidence_ids": [
+        "E1",
+        "E5",
+        "E16",
+        "E9",
+        "E11",
+        "E22"
+      ],
+      "run": 1
+    }
+  ],
+  "answer_checks": [
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    },
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    },
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    },
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    },
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    },
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    },
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    },
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    },
+    {
+      "answer_correctness": null,
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null,
+      "status": "unavailable_answer_generation_disabled"
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "retrieval_metrics": {
+      "document_recall_at_30": 1.0,
+      "document_all_retrieved_at_30": 1,
+      "document_partial_coverage_at_30": 1.0,
+      "evidence_recall_at_6": 0.15,
+      "evidence_all_retrieved_at_6": 0.125,
+      "precision_at_6": 0.041666666666666664,
+      "mrr": 0.6637759170653907,
+      "fact_coverage": 0.15
+    },
+    "answer_metrics": {
+      "answer_fact_coverage": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null
+    },
+    "latency_metrics": {
+      "embedding_ms": {
+        "mean": 7.582222222222223,
+        "p50": 6.59,
+        "p95": 11.893999999999998
+      },
+      "qdrant_ms": {
+        "mean": 1.7622222222222221,
+        "p50": 1.51,
+        "p95": 2.9079999999999995
+      },
+      "ranking_ms": {
+        "mean": 506.51222222222225,
+        "p50": 500.02,
+        "p95": 613.16
+      },
+      "selection_ms": {
+        "mean": 114.06444444444445,
+        "p50": 112.44,
+        "p95": 125.00999999999999
+      },
+      "gemini_ms": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "retrieval_total_ms": {
+        "mean": 517.6633333333333,
+        "p50": 508.75,
+        "p95": 623.102
+      },
+      "client_total_ms": {
+        "mean": 519.6490137774769,
+        "p50": 510.3288749996864,
+        "p95": 625.9127165994869
+      }
+    }
+  },
+  "limitations": [
+    "Independent answer correctness judging was not run.",
+    "Reports are FastAPI-only and are not directly comparable to the historical CLI retrieval baseline."
+  ]
+}

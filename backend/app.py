@@ -2,10 +2,13 @@ from __future__ import annotations
 
 import time
 from contextlib import asynccontextmanager
+from pathlib import Path
 from threading import Lock
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.concurrency import run_in_threadpool
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from .config import Settings
 from .database import Database
@@ -52,8 +55,13 @@ async def lifespan(app: FastAPI):
     finally:
         conn.close()
     state.retrieval = RetrievalService(settings, state.embedder, state.database, state.qdrant, state.config, state.legacy)
-    state.gemini = GeminiService(settings)
-    if settings.rerank_enabled:
+    try:
+        state.gemini = GeminiService(settings)
+    except RuntimeError:
+        # Retrieval-only evaluation can run without a Gemini key. Normal
+        # answer requests still fail explicitly at request time.
+        state.gemini = None
+    if settings.rerank_enabled or settings.reranker_preload:
         from .retrieval_service import reranker_model
         reranker_model(settings.reranker_model)
     app.state.rag = state
@@ -62,6 +70,13 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title='Maharashtra GR RAG API', version='1.0.0', lifespan=lifespan)
+FRONTEND_DIR = Path(__file__).resolve().parent.parent / 'frontend'
+app.mount('/static', StaticFiles(directory=FRONTEND_DIR), name='frontend-static')
+
+
+@app.get('/', include_in_schema=False)
+async def frontend():
+    return FileResponse(FRONTEND_DIR / 'index.html')
 
 
 @app.get('/health', response_model=HealthResponse)
@@ -69,18 +84,37 @@ async def health(request: Request):
     state: AppState = request.app.state.rag
     return HealthResponse(status='ok', collection=state.config['collection_name'],
                           embedding_model=state.settings.embedding_model,
-                          reranker_enabled=state.settings.rerank_enabled)
+                          reranker_enabled=state.settings.rerank_enabled,
+                          api_version=request.app.version)
 
 
 def _query(state: AppState, payload: QueryRequest):
+    if (not payload.generate_answer or payload.evaluation_diagnostics) and not state.settings.evaluation_mode_enabled:
+        raise HTTPException(status_code=403, detail='Evaluation mode is disabled')
     rerank = state.settings.rerank_enabled if payload.rerank is None else payload.rerank
     with state.lock:
-        evidence, timings = state.retrieval.retrieve(
+        retrieval_result = state.retrieval.retrieve(
             payload.question, candidate_k=payload.candidate_k, top_k=payload.top_k,
-            max_per_document=payload.max_per_document, rerank=rerank)
-        answer_started = time.perf_counter()
-        answer = state.gemini.answer(payload.question, evidence)
-        timings['gemini_ms'] = round((time.perf_counter() - answer_started) * 1000, 2)
+            max_per_document=payload.max_per_document, rerank=rerank,
+            include_diagnostics=payload.evaluation_diagnostics)
+        if payload.evaluation_diagnostics:
+            evidence, timings, diagnostics = retrieval_result
+        else:
+            evidence, timings = retrieval_result
+            diagnostics = None
+        if payload.generate_answer:
+            if state.gemini is None:
+                raise RuntimeError('Gemini answer generation is unavailable')
+            answer_started = time.perf_counter()
+            answer = state.gemini.answer(payload.question, evidence)
+            timings['gemini_ms'] = round((time.perf_counter() - answer_started) * 1000, 2)
+        else:
+            answer = {
+                'answer': 'Answer generation was disabled for this evaluation request.',
+                'claims': [], 'limitations': ['Gemini answer generation was not run.'],
+                'answer_status': 'not_run',
+            }
+            timings['gemini_ms'] = 0.0
     evidence_response = [EvidenceResponse(
         evidence_id=item['evidence_id'], document_id=item['document_id'], circular=item['circular'],
         issue_date=item['issue_date'], department=item['department'], page_label=item['page_label'],
@@ -89,7 +123,13 @@ def _query(state: AppState, payload: QueryRequest):
         text=item['text'] if payload.show_evidence else None,
     ) for item in evidence]
     return QueryResponse(answer=answer, evidence=evidence_response, timings_ms=timings,
-                         reranker_enabled=rerank)
+                         reranker_enabled=rerank,
+                         answer_generation_enabled=payload.generate_answer,
+                         effective_parameters={'candidate_k': payload.candidate_k,
+                                               'top_k': payload.top_k,
+                                               'max_per_document': payload.max_per_document,
+                                               'rerank': rerank},
+                         diagnostics=diagnostics)
 
 
 @app.post('/api/v1/query', response_model=QueryResponse)
@@ -97,6 +137,8 @@ async def query(payload: QueryRequest, request: Request):
     state: AppState = request.app.state.rag
     try:
         return await run_in_threadpool(_query, state, payload)
+    except HTTPException:
+        raise
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 

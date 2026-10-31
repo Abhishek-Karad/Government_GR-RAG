@@ -1,0 +1,563 @@
+{
+  "schema_version": "phase0-corpus-audit-v1",
+  "database": "gr_demo.sqlite3",
+  "selected_index_config_id": "21e74095355b2dbbd1185ed3",
+  "document_count": 102,
+  "department_count_indexed": 2,
+  "departments": {
+    "Medical Education and Drugs Department": 2,
+    "Rural Development Department": 100
+  },
+  "source_text": {
+    "documents_with_text": 102,
+    "total_characters": 600681,
+    "latin_character_count": 380322,
+    "devanagari_character_count": 14,
+    "mixed_script_documents": 3
+  },
+  "structure_signals": {
+    "documents_with_pipe_table_markers": 41,
+    "documents_with_numbered_or_lettered_clauses": 82,
+    "documents_with_ocr_or_table_artifacts": 47,
+    "artifact_counts": {
+      "split_punctuation": 7,
+      "ascii_table_or_ocr_grid": 41,
+      "separator_line": 41
+    }
+  },
+  "metadata_completeness": {
+    "missing_gr_number": 22,
+    "missing_issue_date": 94,
+    "missing_source_url": 0,
+    "gemini_enriched": 25
+  },
+  "duplicates": {
+    "exact_duplicate_groups": [],
+    "near_duplicate_pairs": [
+      {
+        "document_ids": [
+          "d7d2a42173ee0987a3fedfc6",
+          "1c37d3c2fdccecdf87fb935f"
+        ],
+        "ratio": 0.9519
+      },
+      {
+        "document_ids": [
+          "d7d2a42173ee0987a3fedfc6",
+          "ba7705ea9aa03881fa6c7d00"
+        ],
+        "ratio": 0.953
+      },
+      {
+        "document_ids": [
+          "d7d2a42173ee0987a3fedfc6",
+          "f67f8aedbb6835ccdacfbfc8"
+        ],
+        "ratio": 0.9582
+      },
+      {
+        "document_ids": [
+          "31bb2e5e628c7593aec5f099",
+          "8dd932b3d7d1ac3576cb121a"
+        ],
+        "ratio": 0.951
+      },
+      {
+        "document_ids": [
+          "3153384a0c2de740110308f7",
+          "36324bc3b3ac278ef1af1594"
+        ],
+        "ratio": 0.962
+      },
+      {
+        "document_ids": [
+          "10b4b53dbe87aa117b62a979",
+          "a4883ed019f7b1e485ae3ddf"
+        ],
+        "ratio": 0.9586
+      },
+      {
+        "document_ids": [
+          "dacedb78a776055bf862e27d",
+          "fb1fb786999e158be6e1bbbc"
+        ],
+        "ratio": 0.9854
+      },
+      {
+        "document_ids": [
+          "dacedb78a776055bf862e27d",
+          "b6518ae160ac61ad042c4d74"
+        ],
+        "ratio": 0.9502
+      },
+      {
+        "document_ids": [
+          "1c37d3c2fdccecdf87fb935f",
+          "9d8ebc374f950ce03334ea74"
+        ],
+        "ratio": 0.9597
+      },
+      {
+        "document_ids": [
+          "1c37d3c2fdccecdf87fb935f",
+          "ba7705ea9aa03881fa6c7d00"
+        ],
+        "ratio": 0.9841
+      },
+      {
+        "document_ids": [
+          "1c37d3c2fdccecdf87fb935f",
+          "286a273c6a8154d8812ab14e"
+        ],
+        "ratio": 0.9737
+      },
+      {
+        "document_ids": [
+          "1c37d3c2fdccecdf87fb935f",
+          "f67f8aedbb6835ccdacfbfc8"
+        ],
+        "ratio": 0.9726
+      },
+      {
+        "document_ids": [
+          "1c37d3c2fdccecdf87fb935f",
+          "b6518ae160ac61ad042c4d74"
+        ],
+        "ratio": 0.9758
+      },
+      {
+        "document_ids": [
+          "fb1fb786999e158be6e1bbbc",
+          "b6518ae160ac61ad042c4d74"
+        ],
+        "ratio": 0.9552
+      },
+      {
+        "document_ids": [
+          "ac1b7afcfe60093c2fd5dc90",
+          "1a65a66e0cf267b91f54c4d3"
+        ],
+        "ratio": 0.9835
+      },
+      {
+        "document_ids": [
+          "9d8ebc374f950ce03334ea74",
+          "ba7705ea9aa03881fa6c7d00"
+        ],
+        "ratio": 0.9632
+      },
+      {
+        "document_ids": [
+          "610fe5980c3977f579223061",
+          "8dd932b3d7d1ac3576cb121a"
+        ],
+        "ratio": 0.9774
+      },
+      {
+        "document_ids": [
+          "610fe5980c3977f579223061",
+          "25c2df711c87393a2d31982e"
+        ],
+        "ratio": 0.9636
+      },
+      {
+        "document_ids": [
+          "610fe5980c3977f579223061",
+          "cd589d4232e948adb9701ca5"
+        ],
+        "ratio": 0.9673
+      },
+      {
+        "document_ids": [
+          "610fe5980c3977f579223061",
+          "4aa7676d57fa6d97ad0f365d"
+        ],
+        "ratio": 0.9562
+      },
+      {
+        "document_ids": [
+          "610fe5980c3977f579223061",
+          "e8fb8fc3e71f2223c94d05e3"
+        ],
+        "ratio": 0.9525
+      },
+      {
+        "document_ids": [
+          "610fe5980c3977f579223061",
+          "83b48e9fd3154e8ba5945837"
+        ],
+        "ratio": 0.9577
+      },
+      {
+        "document_ids": [
+          "610fe5980c3977f579223061",
+          "5e39bb8a146243ff93da0435"
+        ],
+        "ratio": 0.9619
+      },
+      {
+        "document_ids": [
+          "610fe5980c3977f579223061",
+          "ee28fd42db7f18caf334ca5b"
+        ],
+        "ratio": 0.9528
+      },
+      {
+        "document_ids": [
+          "8dd932b3d7d1ac3576cb121a",
+          "25c2df711c87393a2d31982e"
+        ],
+        "ratio": 0.969
+      },
+      {
+        "document_ids": [
+          "8dd932b3d7d1ac3576cb121a",
+          "cd589d4232e948adb9701ca5"
+        ],
+        "ratio": 0.9752
+      },
+      {
+        "document_ids": [
+          "25c2df711c87393a2d31982e",
+          "cd589d4232e948adb9701ca5"
+        ],
+        "ratio": 0.964
+      },
+      {
+        "document_ids": [
+          "25c2df711c87393a2d31982e",
+          "4aa7676d57fa6d97ad0f365d"
+        ],
+        "ratio": 0.9549
+      },
+      {
+        "document_ids": [
+          "25c2df711c87393a2d31982e",
+          "e8fb8fc3e71f2223c94d05e3"
+        ],
+        "ratio": 0.9704
+      },
+      {
+        "document_ids": [
+          "25c2df711c87393a2d31982e",
+          "83b48e9fd3154e8ba5945837"
+        ],
+        "ratio": 0.9633
+      },
+      {
+        "document_ids": [
+          "25c2df711c87393a2d31982e",
+          "5e39bb8a146243ff93da0435"
+        ],
+        "ratio": 0.9601
+      },
+      {
+        "document_ids": [
+          "25c2df711c87393a2d31982e",
+          "ee28fd42db7f18caf334ca5b"
+        ],
+        "ratio": 0.9582
+      },
+      {
+        "document_ids": [
+          "25c2df711c87393a2d31982e",
+          "eefdc97c1f1d4a5e0599e6f1"
+        ],
+        "ratio": 0.9517
+      },
+      {
+        "document_ids": [
+          "cd589d4232e948adb9701ca5",
+          "4aa7676d57fa6d97ad0f365d"
+        ],
+        "ratio": 0.9501
+      },
+      {
+        "document_ids": [
+          "cd589d4232e948adb9701ca5",
+          "83b48e9fd3154e8ba5945837"
+        ],
+        "ratio": 0.9553
+      },
+      {
+        "document_ids": [
+          "4aa7676d57fa6d97ad0f365d",
+          "e8fb8fc3e71f2223c94d05e3"
+        ],
+        "ratio": 0.957
+      },
+      {
+        "document_ids": [
+          "4aa7676d57fa6d97ad0f365d",
+          "83b48e9fd3154e8ba5945837"
+        ],
+        "ratio": 0.9687
+      },
+      {
+        "document_ids": [
+          "4aa7676d57fa6d97ad0f365d",
+          "5e39bb8a146243ff93da0435"
+        ],
+        "ratio": 0.9723
+      },
+      {
+        "document_ids": [
+          "4aa7676d57fa6d97ad0f365d",
+          "5a90001f6532fabff6298574"
+        ],
+        "ratio": 0.9662
+      },
+      {
+        "document_ids": [
+          "4aa7676d57fa6d97ad0f365d",
+          "ee28fd42db7f18caf334ca5b"
+        ],
+        "ratio": 0.9725
+      },
+      {
+        "document_ids": [
+          "4aa7676d57fa6d97ad0f365d",
+          "eefdc97c1f1d4a5e0599e6f1"
+        ],
+        "ratio": 0.9836
+      },
+      {
+        "document_ids": [
+          "74d49acb51c70d3a7d0e92ba",
+          "0b0b7c4b7c2068ce77d036ed"
+        ],
+        "ratio": 0.9647
+      },
+      {
+        "document_ids": [
+          "099df425e4435f352062b6ce",
+          "a5a13a8912bb582897860fc1"
+        ],
+        "ratio": 0.9504
+      },
+      {
+        "document_ids": [
+          "099df425e4435f352062b6ce",
+          "37dc1e436e234d5f6c4dad77"
+        ],
+        "ratio": 0.986
+      },
+      {
+        "document_ids": [
+          "f681c5933854437c97ff3b04",
+          "d3dd95980bc4cc772d49a134"
+        ],
+        "ratio": 0.9797
+      },
+      {
+        "document_ids": [
+          "bf8b467fc440f15a109fd0f9",
+          "4d4cedf569beb0c074c3cd73"
+        ],
+        "ratio": 0.9613
+      },
+      {
+        "document_ids": [
+          "bf8b467fc440f15a109fd0f9",
+          "6e08050653e7ea796ea6cf8a"
+        ],
+        "ratio": 0.9518
+      },
+      {
+        "document_ids": [
+          "bf8b467fc440f15a109fd0f9",
+          "0c98c2cb393bab620c45a57c"
+        ],
+        "ratio": 0.9571
+      },
+      {
+        "document_ids": [
+          "e8fb8fc3e71f2223c94d05e3",
+          "83b48e9fd3154e8ba5945837"
+        ],
+        "ratio": 0.9648
+      },
+      {
+        "document_ids": [
+          "e8fb8fc3e71f2223c94d05e3",
+          "5e39bb8a146243ff93da0435"
+        ],
+        "ratio": 0.9684
+      },
+      {
+        "document_ids": [
+          "e8fb8fc3e71f2223c94d05e3",
+          "5a90001f6532fabff6298574"
+        ],
+        "ratio": 0.9675
+      },
+      {
+        "document_ids": [
+          "e8fb8fc3e71f2223c94d05e3",
+          "ee28fd42db7f18caf334ca5b"
+        ],
+        "ratio": 0.9667
+      },
+      {
+        "document_ids": [
+          "e8fb8fc3e71f2223c94d05e3",
+          "eefdc97c1f1d4a5e0599e6f1"
+        ],
+        "ratio": 0.9584
+      },
+      {
+        "document_ids": [
+          "83b48e9fd3154e8ba5945837",
+          "5e39bb8a146243ff93da0435"
+        ],
+        "ratio": 0.9764
+      },
+      {
+        "document_ids": [
+          "83b48e9fd3154e8ba5945837",
+          "5a90001f6532fabff6298574"
+        ],
+        "ratio": 0.97
+      },
+      {
+        "document_ids": [
+          "83b48e9fd3154e8ba5945837",
+          "ee28fd42db7f18caf334ca5b"
+        ],
+        "ratio": 0.9751
+      },
+      {
+        "document_ids": [
+          "83b48e9fd3154e8ba5945837",
+          "eefdc97c1f1d4a5e0599e6f1"
+        ],
+        "ratio": 0.97
+      },
+      {
+        "document_ids": [
+          "5e39bb8a146243ff93da0435",
+          "5a90001f6532fabff6298574"
+        ],
+        "ratio": 0.9756
+      },
+      {
+        "document_ids": [
+          "5e39bb8a146243ff93da0435",
+          "ee28fd42db7f18caf334ca5b"
+        ],
+        "ratio": 0.9801
+      },
+      {
+        "document_ids": [
+          "5e39bb8a146243ff93da0435",
+          "eefdc97c1f1d4a5e0599e6f1"
+        ],
+        "ratio": 0.9752
+      },
+      {
+        "document_ids": [
+          "5a90001f6532fabff6298574",
+          "ee28fd42db7f18caf334ca5b"
+        ],
+        "ratio": 0.9723
+      },
+      {
+        "document_ids": [
+          "5a90001f6532fabff6298574",
+          "eefdc97c1f1d4a5e0599e6f1"
+        ],
+        "ratio": 0.97
+      },
+      {
+        "document_ids": [
+          "ee28fd42db7f18caf334ca5b",
+          "eefdc97c1f1d4a5e0599e6f1"
+        ],
+        "ratio": 0.9798
+      },
+      {
+        "document_ids": [
+          "ba7705ea9aa03881fa6c7d00",
+          "286a273c6a8154d8812ab14e"
+        ],
+        "ratio": 0.9675
+      },
+      {
+        "document_ids": [
+          "ba7705ea9aa03881fa6c7d00",
+          "f67f8aedbb6835ccdacfbfc8"
+        ],
+        "ratio": 0.9705
+      },
+      {
+        "document_ids": [
+          "ba7705ea9aa03881fa6c7d00",
+          "b6518ae160ac61ad042c4d74"
+        ],
+        "ratio": 0.9694
+      },
+      {
+        "document_ids": [
+          "286a273c6a8154d8812ab14e",
+          "f67f8aedbb6835ccdacfbfc8"
+        ],
+        "ratio": 0.9763
+      },
+      {
+        "document_ids": [
+          "286a273c6a8154d8812ab14e",
+          "b6518ae160ac61ad042c4d74"
+        ],
+        "ratio": 0.9786
+      },
+      {
+        "document_ids": [
+          "f67f8aedbb6835ccdacfbfc8",
+          "b6518ae160ac61ad042c4d74"
+        ],
+        "ratio": 0.9712
+      },
+      {
+        "document_ids": [
+          "a6ce11d629e7f62c6a6d937c",
+          "58a3cbf2c966da44b00f317e"
+        ],
+        "ratio": 0.9645
+      },
+      {
+        "document_ids": [
+          "937556e4f338b5d551b41a6a",
+          "0d3650d9547a1db241c6769f"
+        ],
+        "ratio": 0.9565
+      },
+      {
+        "document_ids": [
+          "4d4cedf569beb0c074c3cd73",
+          "6e08050653e7ea796ea6cf8a"
+        ],
+        "ratio": 0.975
+      },
+      {
+        "document_ids": [
+          "4d4cedf569beb0c074c3cd73",
+          "0c98c2cb393bab620c45a57c"
+        ],
+        "ratio": 0.9581
+      }
+    ]
+  },
+  "source_availability": {
+    "source_paths_recorded": 102,
+    "distinct_source_paths": 102,
+    "remote_fetch_checked": false,
+    "note": "Remote source availability was not probed by this read-only audit."
+  },
+  "index_completeness": {
+    "documents_with_completed_status": 100,
+    "status_counts": {
+      "completed": 100
+    },
+    "chunk_count": 925
+  }
+}

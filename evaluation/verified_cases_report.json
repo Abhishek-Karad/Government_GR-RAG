@@ -1,0 +1,31 @@
+{
+  "source_database": "/Users/abhishekkarad/Desktop/gr_remote_demo/gr_demo.sqlite3",
+  "config_id": "649ad9dd0dec3e081eeba8af",
+  "case_count": 100,
+  "generated_count": 91,
+  "preserved_count": 9,
+  "skipped_candidates": [],
+  "department_counts": {
+    "Rural Development Department": 20,
+    "Law and Judiciary Department": 46,
+    "Agriculture, Dairy Development, Animal Husbandry and Fisheries Department": 31,
+    "Medical Education and Drugs Department": 3
+  },
+  "target_distribution": {
+    "Law and Judiciary Department": 45,
+    "Agriculture, Dairy Development, Animal Husbandry and Fisheries Department": 30,
+    "Rural Development Department": 20,
+    "Medical Education and Drugs Department": 3,
+    "cross_department_or_unanswerable": 2
+  },
+  "department_specific_counts": {
+    "Law and Judiciary Department": 45,
+    "Agriculture, Dairy Development, Animal Husbandry and Fisheries Department": 30,
+    "Rural Development Department": 20,
+    "Medical Education and Drugs Department": 3
+  },
+  "cross_department_or_unanswerable_count": 2,
+  "unverified_cases": [],
+  "current_index_document_count": 726,
+  "current_index_chunk_count": 6698
+}

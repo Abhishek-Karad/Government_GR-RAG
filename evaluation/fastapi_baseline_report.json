@@ -1,0 +1,596 @@
+{
+  "schema_version": "phase0-fastapi-evaluation-v2",
+  "mode": "end-to-end",
+  "base_url": "http://127.0.0.1:8000",
+  "health": {
+    "status": "ok",
+    "collection": "maharashtra-gr-chunks-sentence-transformers-all-minilm-l6-v2-649ad9dd0dec",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker_enabled": false,
+    "api_version": "1.0.0"
+  },
+  "configuration": {
+    "candidate_k": 30,
+    "top_k": 6,
+    "max_per_document": 7,
+    "rerank": true,
+    "observed_response_parameters": []
+  },
+  "case_count": 100,
+  "successful_requests": 0,
+  "failed_requests": 100,
+  "warmup_requested": false,
+  "runs_per_case": 1,
+  "cases": [],
+  "answer_checks": [],
+  "diagnostic_report": [],
+  "failures": [
+    {
+      "id": "eval_001",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_002",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_003",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_004",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_005",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_006",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_007",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_008",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_009",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_010",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_011",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_012",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_013",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_014",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_015",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_016",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_017",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_018",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_019",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_020",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_021",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_022",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_023",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_024",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_025",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_026",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_027",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_028",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_029",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_030",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_031",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_032",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_033",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_034",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_035",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_036",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_037",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_038",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_039",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_040",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_041",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_042",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_043",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_044",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_045",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_046",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_047",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_048",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_049",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_050",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_051",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_052",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_053",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_054",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_055",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_056",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_057",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_058",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_059",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_060",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_061",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_062",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_063",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_064",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_065",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_066",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_067",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_068",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_069",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_070",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_071",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_072",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_073",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_074",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_075",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_076",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_077",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_078",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_079",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_080",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_081",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_082",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_083",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_084",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_085",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_086",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_087",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_088",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_089",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_090",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_091",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_092",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_093",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_094",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_095",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_096",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_097",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_098",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_099",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    },
+    {
+      "id": "eval_100",
+      "error": "HTTP 500: {'detail': \"400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Manually set deadline 5s is too short. Minimum allowed deadline is 10s.', 'status': 'INVALID_ARGUMENT'}}\"}",
+      "type": "ApiEvaluationError"
+    }
+  ],
+  "summary": {
+    "retrieval_metrics": {
+      "document_recall_at_30": null,
+      "candidate_evidence_recall_at_30": null,
+      "document_all_retrieved_at_30": null,
+      "document_partial_coverage_at_30": null,
+      "evidence_recall_at_6": null,
+      "evidence_all_retrieved_at_6": null,
+      "precision_at_6": null,
+      "mrr": null,
+      "fact_coverage": null
+    },
+    "answer_metrics": {
+      "answer_fact_coverage": null,
+      "numerical_exact_match_accuracy": null,
+      "citation_id_validity": null,
+      "citation_factual_support": null,
+      "unsupported_claim_rate": null,
+      "abstention_accuracy": null
+    },
+    "latency_metrics": {
+      "embedding_ms": {
+        "mean": null,
+        "p50": null,
+        "p95": null
+      },
+      "qdrant_ms": {
+        "mean": null,
+        "p50": null,
+        "p95": null
+      },
+      "ranking_ms": {
+        "mean": null,
+        "p50": null,
+        "p95": null
+      },
+      "selection_ms": {
+        "mean": null,
+        "p50": null,
+        "p95": null
+      },
+      "gemini_ms": {
+        "mean": null,
+        "p50": null,
+        "p95": null
+      },
+      "retrieval_total_ms": {
+        "mean": null,
+        "p50": null,
+        "p95": null
+      },
+      "client_total_ms": {
+        "mean": null,
+        "p50": null,
+        "p95": null
+      }
+    },
+    "group_metrics": {
+      "department_group": {},
+      "question_type": {}
+    }
+  },
+  "limitations": [
+    "Independent answer correctness judging was not run.",
+    "Citation factual support is the backend's claim.verified result, not an independent judge.",
+    "Reports are FastAPI-only and are not directly comparable to the historical CLI retrieval baseline."
+  ]
+}
